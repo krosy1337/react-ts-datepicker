@@ -1,0 +1,90 @@
+body {
+    padding: 1rem;
+}
+
+.App {
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.DateInput {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+
+    padding: 5px 10px;
+}
+
+.Calendar {
+    padding-top: 10px;
+
+    border: 1px solid lightgray;
+}
+
+.CalendarDate {
+    text-align: center;
+}
+
+.CalendarControls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.CalendarControlButton {
+    margin: 0 10px;
+}
+
+.CalendarPanel {
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-columns: repeat(7, 1fr);
+
+    width: 600px;
+    height: 600px;
+    border-top: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+}
+
+.CalendarPanelItem {
+    border-right: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+
+    padding: 4px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    cursor: pointer;
+}
+
+.CalendarPanelItem--today {
+    color: red;
+}
+
+.CalendarPanelItem__date {
+    border-radius: 50%;
+
+    padding: 4px;
+}
+
+.CalendarPanelItem--selected .CalendarPanelItem__date {
+    background-color: red;
+    color: white;
+}
+
+.CalendarPanelItem--not-current .CalendarPanelItem__date {
+    opacity: 0.5;
+}
+
+.CalendarPanelItem--not-in-range {
+    cursor: not-allowed;
+}
+
+.CalendarPanelItem--not-in-range .CalendarPanelItem__date {
+    opacity: 0.5;
+
+}
